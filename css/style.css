@@ -1,0 +1,6 @@
+canvas {
+    border: 1px solid black;
+    margin: 100px auto;
+    background: url('../img/background_gradient.jpg') 0 0;
+    background-size: cover;
+}
