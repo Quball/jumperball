@@ -105,6 +105,16 @@ function animation(enemy, bomb, stage){
     jumping = false;
     jumping_right = false;
     kumping_left = false;
+    speed = 200;
+    
+    var exp_X;
+    var exp_Y;
+    
+    /* 
+    setInterval(function(){
+        speed += 50;
+    }, 6000);
+    */
     
     $(document).keydown(function(evt) {    
     
@@ -206,9 +216,6 @@ function animation(enemy, bomb, stage){
         }
     });
     
-    var exp_X;
-    var exp_Y;
-    
     function play_explosion(x){
         bmpExplosion.x = exp_X - 128;
         bmpExplosion.y = stage.canvas.height - 128;
@@ -218,7 +225,7 @@ function animation(enemy, bomb, stage){
     
     function tick(event){
         
-        bomb.y += event.delta/1000*200;
+        bomb.y += event.delta/1000*speed;
         
         if(bomb.y > stage.canvas.height){
             exp_X = bomb.x;
