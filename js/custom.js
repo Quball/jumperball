@@ -110,11 +110,11 @@ function animation(enemy, bomb, stage){
     var exp_X;
     var exp_Y;
     
-    /* 
+    
     setInterval(function(){
         speed += 50;
     }, 6000);
-    */
+   
     
     $(document).keydown(function(evt) {    
     
